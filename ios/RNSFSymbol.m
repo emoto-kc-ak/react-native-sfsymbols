@@ -12,7 +12,7 @@ RCT_EXPORT_MODULE(RNSFSymbol)
 
 - (UIView *)view
 {
-  UISFSymbolImageView *imageView = [[UISFSymbolImageView alloc] initWithImage:image];
+  UISFSymbolImageView *imageView = [[UISFSymbolImageView alloc] initWithImage:nil];
   // @todo customize content mode?
   [imageView setContentMode:UIViewContentModeScaleAspectFit];
   return imageView;
@@ -20,27 +20,48 @@ RCT_EXPORT_MODULE(RNSFSymbol)
 
 RCT_CUSTOM_VIEW_PROPERTY(multicolor, BOOL, UISFSymbolImageView)
 {
-  [view setMulticolor:json];
+  if (json) {
+    view.multicolor = [RCTConvert BOOL:json];
+  } else {
+    view.multicolor = defaultView.multicolor;
+  }
   [view updateImage];
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(systemName, NSString, UISFSymbolImageView)
 {
-  [view setSystemName:json];
+  if (json) {
+    view.systemName = [RCTConvert NSString:json];
+  } else {
+    view.systemName = defaultView.systemName;
+  }
   [view updateImage];
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(color, UIColor, UISFSymbolImageView) {
-  [view setTintColor:json];
+  if (json) {
+    view.tintColor = [RCTConvert UIColor:json];
+  } else {
+    view.tintColor = defaultView.tintColor;
+  }
+  [view updateImage];
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(scale, NSString, UISFSymbolImageView) {
-  [view setScale:json];
+  if (json) {
+    view.scale = [RCTConvert NSString:json];
+  } else {
+    view.scale = defaultView.scale;
+  }
   [view updateImage];
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(weight, NSString, UISFSymbolImageView) {
-  [view setWeight:json];
+  if (json) {
+    view.weight = [RCTConvert NSString:json];
+  } else {
+    view.weight = defaultView.weight;
+  }
   [view updateImage];
 }
 
