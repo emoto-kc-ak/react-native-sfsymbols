@@ -44,7 +44,6 @@ RCT_CUSTOM_VIEW_PROPERTY(color, UIColor, UISFSymbolImageView) {
   } else {
     view.tintColor = defaultView.tintColor;
   }
-  [view updateImage];
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(scale, NSString, UISFSymbolImageView) {
