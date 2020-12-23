@@ -2,9 +2,21 @@
 
 Use SF Symbols in React Native for iOS
 
-**Note**: iOS 14 only
+**Note**: iOS 14 only (13 or higher?)
 
 ![iOS Simulator with icons example](https://media.giphy.com/media/5gB4qLjkuYwVn10O77/giphy.gif)
+
+## How to install
+
+```
+npm install --save git+https://github.com/emoto-kc-ak/react-native-sfsymbols.git#v1.0.0
+```
+
+Or to install the latest development version.
+
+```
+npm install --save git+https://github.com/emoto-kc-ak/react-native-sfsymbols.git#installable
+```
 
 ## Props
 
