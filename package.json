@@ -14,7 +14,7 @@
     "prettier": "prettier --write '**/*.{json,md,js,jsx,ts,tsx}'",
     "lint": "yarn run eslint",
     "eslint": "eslint --fix 'src/**/*.{ts,tsx}'",
-    "build": "tsc",
+    "build": "tsc -m ES6",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
