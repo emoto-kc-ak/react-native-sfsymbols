@@ -9,7 +9,7 @@ Use SF Symbols in React Native for iOS
 ## How to install
 
 ```
-npm install --save git+https://github.com/emoto-kc-ak/react-native-sfsymbols.git#v1.0.0
+npm install --save git+https://github.com/emoto-kc-ak/react-native-sfsymbols.git#v1.0.1
 ```
 
 Or to install the latest development version.
