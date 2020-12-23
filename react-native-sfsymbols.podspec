@@ -11,9 +11,9 @@ Pod::Spec.new do |s|
   s.authors      = package['author']
   s.ios.deployment_target = '13.0'
 
-  s.source       = { :git => "https://github.com/birkir/react-native-sfsymbols.git" }
+  s.source       = { :git => "https://github.com/emoto-kc-ak/react-native-sfsymbols.git" }
 
   s.source_files  = "ios/*.{h,m}"
 
-  s.dependency 'React'
+  s.dependency 'React-Core'
 end
