@@ -17,7 +17,7 @@ export declare enum SFSymbolScale {
 }
 interface SFSymbolProps {
     name: string;
-    color?: string;
+    color?: number | string;
     style?: StyleProp<ViewStyle>;
     weight?: SFSymbolWeight;
     scale?: SFSymbolScale;
