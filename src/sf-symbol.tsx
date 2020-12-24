@@ -25,7 +25,7 @@ export enum SFSymbolScale {
 
 interface SFSymbolProps {
   name: string;
-  color?: string;
+  color?: number | string;
   style?: StyleProp<ViewStyle>;
   weight?: SFSymbolWeight;
   scale?: SFSymbolScale;
@@ -33,7 +33,7 @@ interface SFSymbolProps {
 }
 
 type NativeSFSymbolProps = Omit<SFSymbolProps, "color" | "name"> & {
-  color: number | symbol;
+  color: number | string;
   systemName: string;
 };
 
@@ -43,7 +43,7 @@ export class SFSymbol extends React.Component<SFSymbolProps> {
   render() {
     const { name, color, ...props } = this.props;
     return (
-      <RNSFSymbol {...props} systemName={name} color={processColor(color)} />
+      <RNSFSymbol {...props} systemName={name} color={color} />
     );
   }
 }
